@@ -42,11 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\Client.cs" />
+    <Compile Include="Command\AbstractCommand.cs" />
+    <Compile Include="Command\CalculatorCommand.cs" />
+    <Compile Include="Command\Invoker.cs" />
+    <Compile Include="Command\Receivers\CalcReceiver.cs" />
+    <Compile Include="Command\Receivers\TextFormatterReceiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

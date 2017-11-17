@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPatterns.Command;
 
 namespace DesignPatterns
 {
@@ -10,6 +7,12 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region Command
+
+            Client client = new Client();
+            client.Compute('+', 20, 150);
+            Console.ReadLine();
+            #endregion
         }
     }
 }
