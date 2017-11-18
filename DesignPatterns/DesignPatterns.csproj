@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\Client.cs" />
-    <Compile Include="Command\AbstractCommand.cs" />
-    <Compile Include="Command\CalculatorCommand.cs" />
-    <Compile Include="Command\Invoker.cs" />
-    <Compile Include="Command\Receivers\CalcReceiver.cs" />
-    <Compile Include="Command\Receivers\TextFormatterReceiver.cs" />
+    <Compile Include="Command\FirstImplementation\Client.cs" />
+    <Compile Include="Command\FirstImplementation\AbstractCommand.cs" />
+    <Compile Include="Command\FirstImplementation\CalculatorCommand.cs" />
+    <Compile Include="Command\FirstImplementation\Invoker.cs" />
+    <Compile Include="Command\FirstImplementation\Receivers\CalcReceiver.cs" />
+    <Compile Include="Command\FirstImplementation\Receivers\TextFormatterReceiver.cs" />
+    <Compile Include="Command\SecondImplementation\ConcreteCommand.cs" />
+    <Compile Include="Command\SecondImplementation\ICommand.cs" />
+    <Compile Include="Command\SecondImplementation\Invoker.cs" />
+    <Compile Include="Command\SecondImplementation\Receiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
