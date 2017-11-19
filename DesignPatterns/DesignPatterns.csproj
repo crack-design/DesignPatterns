@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\Adapter.cs" />
+    <Compile Include="Adapter\AdapterConsumer.cs" />
+    <Compile Include="Adapter\INewSocket.cs" />
+    <Compile Include="Adapter\NewSocket.cs" />
+    <Compile Include="Adapter\OldSocket.cs" />
     <Compile Include="Command\FirstImplementation\Client.cs" />
     <Compile Include="Command\FirstImplementation\AbstractCommand.cs" />
     <Compile Include="Command\FirstImplementation\CalculatorCommand.cs" />
