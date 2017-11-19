@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatterns.Adapter
+﻿namespace DesignPatterns.Adapter
 {
-    public class Adapter : INewSocket
+    public class Adapter : INewSocket, IOldSocket
     {
-        private readonly OldSocket adaptee;
+        private readonly OldSocket adapteeOld;
+        private readonly NewSocket adapteeNew;
         public Adapter(OldSocket adaptee)
         {
-            this.adaptee = adaptee;
+            this.adapteeOld = adaptee;
+        }
+        public Adapter(NewSocket adaptee)
+        {
+            this.adapteeNew = adaptee;
         }
         public string MatchNewSocket()
         {
-            return this.adaptee.MatchThinSocket();
+            return this.adapteeOld.MatchThinSocket();
+        }
+        public string MatchOldSocket()
+        {
+            return this.adapteeNew.MatchNewSocket();
         }
     }
 }

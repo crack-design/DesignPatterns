@@ -45,6 +45,7 @@
     <Compile Include="Adapter\Adapter.cs" />
     <Compile Include="Adapter\AdapterConsumer.cs" />
     <Compile Include="Adapter\INewSocket.cs" />
+    <Compile Include="Adapter\IOldSocket.cs" />
     <Compile Include="Adapter\NewSocket.cs" />
     <Compile Include="Adapter\OldSocket.cs" />
     <Compile Include="Command\FirstImplementation\Client.cs" />

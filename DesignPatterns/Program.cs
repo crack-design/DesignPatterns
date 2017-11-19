@@ -41,6 +41,9 @@ namespace DesignPatterns
             var oldSocket = new OldSocket();
             var adapter = new Adapter.Adapter(oldSocket);
             AdapterConsumer.Charge(adapter);
+            //Vice versa
+            var adapterForNewSocket = new Adapter.Adapter(newSocket);
+            AdapterConsumer.ChargeViaOldSocket(adapterForNewSocket);
             Console.ReadLine();
 #endregion
         }

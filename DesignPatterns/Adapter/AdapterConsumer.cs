@@ -12,5 +12,10 @@ namespace DesignPatterns.Adapter
         {
             Console.WriteLine(newSocket.MatchNewSocket());
         }
+
+        public static void ChargeViaOldSocket(IOldSocket oldSocket)
+        {
+            Console.WriteLine(oldSocket.MatchOldSocket());
+        }
     }
 }
