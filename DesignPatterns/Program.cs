@@ -2,6 +2,7 @@
 using DesignPatterns.Command;
 using DesignPatterns.Command.SecondImplementation;
 using DesignPatterns.Adapter;
+using DesignPatterns.Builder;
 
 namespace DesignPatterns
 {
@@ -36,14 +37,29 @@ namespace DesignPatterns
             //https://www.cuttingedge.it/blogs/steven/pivot/entry.php?id=91
             #region Adapter
 
-            var newSocket = new NewSocket();
-            AdapterConsumer.Charge(newSocket);
-            var oldSocket = new OldSocket();
-            var adapter = new Adapter.Adapter(oldSocket);
-            AdapterConsumer.Charge(adapter);
-            //Vice versa
-            var adapterForNewSocket = new Adapter.Adapter(newSocket);
-            AdapterConsumer.ChargeViaOldSocket(adapterForNewSocket);
+            //var newSocket = new NewSocket();
+            //AdapterConsumer.Charge(newSocket);
+            //var oldSocket = new OldSocket();
+            //var adapter = new Adapter.Adapter(oldSocket);
+            //AdapterConsumer.Charge(adapter);
+            ////Vice versa
+            //var adapterForNewSocket = new Adapter.Adapter(newSocket);
+            //AdapterConsumer.ChargeViaOldSocket(adapterForNewSocket);
+            //Console.ReadLine();
+            #endregion
+
+            #region Builder
+            VehicleBuilder builder;
+
+            var shop = new Director();
+            builder = new MotorCycleBuilder();
+            shop.Construct(builder);
+            builder.Vehicle.Show();
+
+            builder = new CarBuilder();
+            shop.Construct(builder);
+            builder.Vehicle.Show();
+
             Console.ReadLine();
 #endregion
         }

@@ -48,6 +48,11 @@
     <Compile Include="Adapter\IOldSocket.cs" />
     <Compile Include="Adapter\NewSocket.cs" />
     <Compile Include="Adapter\OldSocket.cs" />
+    <Compile Include="Builder\CarBuilder.cs" />
+    <Compile Include="Builder\Director.cs" />
+    <Compile Include="Builder\MotorCycleBuilder.cs" />
+    <Compile Include="Builder\Vehicle.cs" />
+    <Compile Include="Builder\VehicleBuilder.cs" />
     <Compile Include="Command\FirstImplementation\Client.cs" />
     <Compile Include="Command\FirstImplementation\AbstractCommand.cs" />
     <Compile Include="Command\FirstImplementation\CalculatorCommand.cs" />
