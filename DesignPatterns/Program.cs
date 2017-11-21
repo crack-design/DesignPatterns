@@ -3,6 +3,7 @@ using DesignPatterns.Command;
 using DesignPatterns.Command.SecondImplementation;
 using DesignPatterns.Adapter;
 using DesignPatterns.Builder;
+using DesignPatterns.Strategy;
 
 namespace DesignPatterns
 {
@@ -61,7 +62,27 @@ namespace DesignPatterns
             builder.Vehicle.Show();
 
             Console.ReadLine();
-#endregion
+            #endregion
+
+            #region Strategy
+
+            SortedList records = new SortedList();
+
+            records.Add("Jack");
+            records.Add("Jill");
+            records.Add("Smith");
+            records.Add("Mike");
+            records.Add("Abbyy");
+
+            records.SetSortStrategy(new QuickSort());
+            records.Sort();
+
+            records.SetSortStrategy(new MergeSort());
+            records.Sort();
+
+            Console.ReadKey();
+
+            #endregion
         }
     }
 }

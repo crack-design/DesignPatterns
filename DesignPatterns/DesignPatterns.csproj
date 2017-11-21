@@ -65,6 +65,10 @@
     <Compile Include="Command\SecondImplementation\Receiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\MergeSort.cs" />
+    <Compile Include="Strategy\QuickSort.cs" />
+    <Compile Include="Strategy\SortedList.cs" />
+    <Compile Include="Strategy\SortingStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
