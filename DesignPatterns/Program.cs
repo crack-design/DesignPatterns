@@ -3,6 +3,7 @@ using DesignPatterns.Command;
 using DesignPatterns.Command.SecondImplementation;
 using DesignPatterns.Adapter;
 using DesignPatterns.Builder;
+using DesignPatterns.Observer;
 using DesignPatterns.Strategy;
 
 namespace DesignPatterns
@@ -41,8 +42,7 @@ namespace DesignPatterns
             //var newSocket = new NewSocket();
             //AdapterConsumer.Charge(newSocket);
             //var oldSocket = new OldSocket();
-            //var adapter = new Adapter.Adapter(oldSocket);
-            //AdapterConsumer.Charge(adapter);
+
             ////Vice versa
             //var adapterForNewSocket = new Adapter.Adapter(newSocket);
             //AdapterConsumer.ChargeViaOldSocket(adapterForNewSocket);
@@ -50,37 +50,54 @@ namespace DesignPatterns
             #endregion
 
             #region Builder
-            VehicleBuilder builder;
+            //VehicleBuilder builder;
 
-            var shop = new Director();
-            builder = new MotorCycleBuilder();
-            shop.Construct(builder);
-            builder.Vehicle.Show();
+            //var shop = new Director();
+            //builder = new MotorCycleBuilder();
+            //shop.Construct(builder);
+            //builder.Vehicle.Show();
 
-            builder = new CarBuilder();
-            shop.Construct(builder);
-            builder.Vehicle.Show();
+            //builder = new CarBuilder();
+            //shop.Construct(builder);
+            //builder.Vehicle.Show();
 
-            Console.ReadLine();
+            //Console.ReadLine();
             #endregion
 
             #region Strategy
 
-            SortedList records = new SortedList();
+            //SortedList records = new SortedList();
 
-            records.Add("Jack");
-            records.Add("Jill");
-            records.Add("Smith");
-            records.Add("Mike");
-            records.Add("Abbyy");
+            //records.Add("Jack");
+            //records.Add("Jill");
+            //records.Add("Smith");
+            //records.Add("Mike");
+            //records.Add("Abbyy");
 
-            records.SetSortStrategy(new QuickSort());
-            records.Sort();
+            //records.SetSortStrategy(new QuickSort());
+            //records.Sort();
 
-            records.SetSortStrategy(new MergeSort());
-            records.Sort();
+            //records.SetSortStrategy(new MergeSort());
+            //records.Sort();
 
-            Console.ReadKey();
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Observer
+            LocationTracker provider = new LocationTracker();
+            LocationReporter reporter1 = new LocationReporter("FixedGPS");
+            reporter1.Subscribe(provider);
+            LocationReporter reporter2 = new LocationReporter("MobileGPS");
+            reporter2.Subscribe(provider);
+
+            provider.TrackLocation(new Location(47.6456, -122.1312));
+            reporter1.Unsubscribe();
+            provider.TrackLocation(new Location(47.6677, -122.1199));
+            provider.TrackLocation(null);
+            provider.EndTransmission();
+
+            Console.ReadLine();
 
             #endregion
         }

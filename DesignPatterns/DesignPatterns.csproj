@@ -63,6 +63,10 @@
     <Compile Include="Command\SecondImplementation\ICommand.cs" />
     <Compile Include="Command\SecondImplementation\Invoker.cs" />
     <Compile Include="Command\SecondImplementation\Receiver.cs" />
+    <Compile Include="Observer\Location.cs" />
+    <Compile Include="Observer\LocationReporter.cs" />
+    <Compile Include="Observer\LocationTracker.cs" />
+    <Compile Include="Observer\LocationUnknownException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strategy\MergeSort.cs" />
